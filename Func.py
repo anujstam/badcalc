@@ -1,0 +1,10 @@
+from Tkinter import *
+root=Tk()
+fnc_page=Frame(root)
+fnc_page.grid()
+btn_load=Button(fnc_page,text="Load Function")
+btn_load["command"]=lambda:execfile("func_loader.py",globals())
+btn_load.grid(row=1,column=1,pady=10)
+btn_save=Button(fnc_page,text="Save Function")
+btn_save["command"]=lambda:execfile("func_saver.py",globals())
+btn_save.grid(row=2,column=1,pady=10)
